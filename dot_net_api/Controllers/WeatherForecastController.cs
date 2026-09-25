@@ -1,3 +1,4 @@
+using dot_net_api.WeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dot_net_api.Controllers;
@@ -6,20 +7,28 @@ namespace dot_net_api.Controllers;
 [Route("api/[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries =
-    [
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    ];
+    private const int MinDays = 1;
+    private const int MaxDays = 14;
+    private const int DefaultDays = 5;
+    private readonly IWeatherForecastService _weatherForecastService;
+    public WeatherForecastController(IWeatherForecastService weatherForecastService)
+    {
+        _weatherForecastService = weatherForecastService;
+    }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public ActionResult<WeatherForecast[]> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        return _weatherForecastService.GetWeatherForecast(DefaultDays);
+    }
+
+    [HttpGet("{days}")]
+    public ActionResult<WeatherForecast[]> GetByDays(int days)
+    {
+        if (days < MinDays || days > MaxDays)
         {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+            return BadRequest($"Need to request between {MinDays} and {MaxDays} days, got {days}");
+        }
+        return _weatherForecastService.GetWeatherForecast(days);
     }
 }
