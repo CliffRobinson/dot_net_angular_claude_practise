@@ -405,3 +405,7 @@ dotnet_diagnostic.IDE0055.severity = warning
 dotnet_diagnostic.IDE0036.severity = warning
 # IDE0040: require explicit accessibility modifiers (`private`, `public`)
 dotnet_diagnostic.IDE0040.severity = warning
+
+# Test projects: names conventionally use underscores (Method_Scenario_Expected)
+[DotNetApi.Tests/**.cs]
+dotnet_diagnostic.CA1707.severity = none

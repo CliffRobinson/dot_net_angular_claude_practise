@@ -8,7 +8,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+builder.Services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
 
 
 var app = builder.Build();

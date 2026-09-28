@@ -5,6 +5,9 @@
   "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
   "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
 
+  // VS Code doesn't apply .editorconfig's insert_final_newline without an extension.
+  "files.insertFinalNewline": true,
+
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp",
     "editor.formatOnSave": true,
