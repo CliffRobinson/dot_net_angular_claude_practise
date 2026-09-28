@@ -38,4 +38,13 @@ public class WeatherForecastControllerTests
         Assert.Null(result.Result);
         _weatherForecastService.Received(1).GetWeatherForecast(days);
     }
+
+    [Fact]
+    public void Get_CallsServiceWithFive_WhenCalled()
+    {
+        ActionResult<WeatherForecast[]> result = _sut.Get();
+
+        Assert.Null(result.Result);
+        _weatherForecastService.Received(1).GetWeatherForecast(5);
+    }
 }
