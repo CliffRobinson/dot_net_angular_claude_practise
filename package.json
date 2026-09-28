@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "scripts": {
+        "test:api": "./scripts/watch-tests.sh",
+        "api": "dotnet watch --project DotNetApi",
+        "client": "npm --prefix client start"
+    }
+}
