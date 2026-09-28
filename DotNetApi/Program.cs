@@ -1,4 +1,4 @@
-using dot_net_api.WeatherForecasts;
+using DotNetApi.Features.WeatherForecasts;
 
 var builder = WebApplication.CreateBuilder(args);
 

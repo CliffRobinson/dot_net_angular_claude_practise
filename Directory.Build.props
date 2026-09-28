@@ -1,0 +1,13 @@
+<Project>
+  <!-- Applies to every .csproj under this folder (API now, test projects later). -->
+  <PropertyGroup>
+    <!-- Enable the recommended set of .NET code-quality (CA) analyzers as warnings. -->
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <!-- Report .editorconfig code-style (IDE) rules during `dotnet build`, not just in the editor. -->
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <!-- Required for IDE0005 (unnecessary usings) to be reported at build time. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- ...but don't warn about missing XML doc comments on public members. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+</Project>

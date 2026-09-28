@@ -1,5 +1,5 @@
 .NET API
-cd dot_net_api
+cd DotNetApi
 dotnet run                      # http://localhost:5128
 dotnet run --launch-profile https   # https://localhost:7001 + http://localhost:5128
 dotnet watch                    # hot reload, like nodemon

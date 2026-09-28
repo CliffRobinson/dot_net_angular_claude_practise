@@ -1,4 +1,4 @@
-namespace dot_net_api.WeatherForecasts;
+namespace DotNetApi.Features.WeatherForecasts;
 
 public class WeatherForecast
 {

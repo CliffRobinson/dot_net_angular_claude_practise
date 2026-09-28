@@ -1,9 +1,4 @@
-namespace dot_net_api.WeatherForecasts;
-
-public interface IWeatherForecastService
-{
-    WeatherForecast[] GetWeatherForecast(int days);
-}
+namespace DotNetApi.Features.WeatherForecasts;
 
 public class WeatherForecastService : IWeatherForecastService
 {

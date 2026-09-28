@@ -1,7 +1,6 @@
-using dot_net_api.WeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dot_net_api.Controllers;
+namespace DotNetApi.Features.WeatherForecasts;
 
 [ApiController]
 [Route("api/[controller]")]

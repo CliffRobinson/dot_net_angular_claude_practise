@@ -1,0 +1,15 @@
+{
+  "dotnet.defaultSolution": "dot_net_angular_claude_practice.slnx",
+
+  // Analyse every file in the solution, not only the ones currently open.
+  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  }
+}
