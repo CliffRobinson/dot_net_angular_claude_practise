@@ -2,6 +2,8 @@
   "recommendations": [
     "ms-dotnettools.csdevkit",
     "ms-dotnettools.csharp",
-    "angular.ng-template"
+    "angular.ng-template",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
   ]
 }

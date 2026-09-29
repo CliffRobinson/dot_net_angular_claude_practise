@@ -14,5 +14,28 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
+  },
+
+  // Angular client: ESLint runs from client/ (where eslint.config.js lives).
+  "eslint.workingDirectories": ["./client"],
+  "eslint.validate": ["typescript", "html"],
+
+  // Prettier formats on save (uses client/.prettierrc); ESLint auto-fixes what it can.
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
