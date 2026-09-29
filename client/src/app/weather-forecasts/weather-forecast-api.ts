@@ -8,7 +8,7 @@ import { WeatherForecast } from './weather-forecast';
 })
 export class WeatherForecastApi {
   private readonly http = inject(HttpClient);
-  private readonly baseUrl = "/api/weatherforecast";
+  private readonly baseUrl = '/api/weatherforecast';
 
   get(): Observable<WeatherForecast[]> {
     return this.http.get<WeatherForecast[]>(this.baseUrl);
