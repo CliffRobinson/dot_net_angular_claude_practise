@@ -9,5 +9,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="DotNetApi.Tests" />
+  </ItemGroup>
 
 </Project>
